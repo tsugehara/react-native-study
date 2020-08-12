@@ -16,7 +16,7 @@ module.exports = {
 		"@typescript-eslint/quotes": ["error", "double"],
 		// インデントはタブ
 		"@typescript-eslint/indent": ["error", "tab"],
-		// 行辺りの文字数は80じゃなくて180
+		// 行辺りの文字数は80じゃなくて160
 		"max-len": ["error", { code: 160 }],
 		// インデントにタブは使っていい（途中のタブは駄目）
 		"no-tabs": ["error", { allowIndentationTabs: true }],
