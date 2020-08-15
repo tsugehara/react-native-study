@@ -8,12 +8,14 @@
 		"@testing-library/user-event": "^7.2.1",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
+		"react-native-web": "^0.13.7",
 		"react-scripts": "3.4.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
+		"test:run": "react-scripts test --watchAll=false",
 		"eject": "react-scripts eject",
 		"lint": "eslint -c ./.eslintrc.js --ext .tsx,.ts src/",
 		"lint:fix": "eslint -c ./.eslintrc.js --ext .tsx,.ts src/ --fix"
