@@ -24,6 +24,10 @@ module.exports = {
 		"react/jsx-indent": ["error", "tab"],
 		// インデントはタブ！！
 		"react/jsx-indent-props": ["error", "tab"],
+		// desructing使うかどうかくらいはこっちで選ばせてもらいたい気持ち
+		"react/destructuring-assignment": "off",
+		// tsなのでprop-typesはいらない
+		"react/prop-types": "off",
 	}
 };
 
