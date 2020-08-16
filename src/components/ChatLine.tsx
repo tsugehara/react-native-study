@@ -1,10 +1,17 @@
 import React from "react";
-import { Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 import * as types from "../types";
 
 const style = StyleSheet.create({
 	container: {
-		alignItems: "center",
+		display: "flex",
+		flexDirection: "row",
+	},
+	contentOwner: {
+		width: 60,
+	},
+	content: {
+		flex: 2,
 	},
 });
 
@@ -18,7 +25,10 @@ export default class extends React.Component<Props> {
 	render() {
 		const { item } = this.props;
 		return (
-			<Text style={style.container}>{item.value}</Text>
+			<View style={style.container}>
+				<Text style={style.contentOwner}>{item.displayName}</Text>
+				<Text style={style.content}>{item.value}</Text>
+			</View>
 		);
 	}
 }
