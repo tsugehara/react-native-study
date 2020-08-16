@@ -7,14 +7,12 @@ const style = StyleSheet.create({
 	},
 });
 
-export default class extends React.Component {
-	render() {
-		return (
-			<View style={style.container}>
-				<Text>
-					A
-				</Text>
-			</View>
-		);
-	}
+export default function () {
+	return (
+		<View style={style.container}>
+			<Text>
+				A
+			</Text>
+		</View>
+	);
 }
