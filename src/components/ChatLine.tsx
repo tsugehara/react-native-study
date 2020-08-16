@@ -1,5 +1,6 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { Text, StyleSheet } from "react-native";
+import * as types from "../types";
 
 const style = StyleSheet.create({
 	container: {
@@ -7,12 +8,17 @@ const style = StyleSheet.create({
 	},
 });
 
-export default function () {
-	return (
-		<View style={style.container}>
-			<Text>
-				A
-			</Text>
-		</View>
-	);
+interface Props {
+	item: types.Chat;
+}
+
+// Pure functionにしろと怒られるけど、React.Componentを継承したクラスの書き方
+// eslint-disable-next-line react/prefer-stateless-function
+export default class extends React.Component<Props> {
+	render() {
+		const { item } = this.props;
+		return (
+			<Text style={style.container}>{item.value}</Text>
+		);
+	}
 }
